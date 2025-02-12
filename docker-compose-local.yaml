@@ -1,7 +1,9 @@
 services:
   app:
     container_name: bolt
-    image: bolt-ai:development
+    build:
+      context: .
+      dockerfile: Dockerfile
     env_file: 'stack.env'
     environment:
       - NODE_ENV=development
