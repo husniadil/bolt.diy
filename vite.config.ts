@@ -93,6 +93,9 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+    server: {
+      allowedHosts: ['bolt.husniadil.com'],
+    },
     plugins: [
       nodePolyfills({
         include: ['path', 'buffer', 'process'],
